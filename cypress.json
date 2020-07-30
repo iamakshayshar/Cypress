@@ -1,0 +1,16 @@
+{
+    "video": true,
+    "screenshotsfolder": "cypress/videos",
+    "baseUrl": "http://eaapp.somee.com/",
+    "env": {
+        "username": "admin"
+    },
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+    }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-30T07:44:55.983Z",
+    "end": "2020-07-30T07:45:27.735Z",
+    "duration": 31752,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ee1b06d1-fbf3-47a6-aba3-c176e9a64816",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Tests\\ea.automation.spec.js",
+      "file": "cypress\\integration\\examples\\Tests\\ea.automation.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a5fd3cdc-e830-4ee0-b429-6d249a6f7dde",
+          "title": "Testing of EA App",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Application Test End to End",
+              "fullTitle": "Testing of EA App Application Test End to End",
+              "timedOut": null,
+              "duration": 30780,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// This is the long way of using alias\n// cy.get(\"#loginLink\").then(($link) => {\n//     return $link.text();\n// }).as(\"linkText\");\n// This is the short way of using alias\ncy.get(\"#loginLink\").invoke('text').as(\"linkText\");\ncy.get(\"@linkText\").then(function ($x) {\n  expect($x).is.eql(\"Login\");\n});\ncy.contains(\"Login\").click(); // Verifying URL \ncy.url().should(\"include\", \"/Account/Login\"); // Clearing Username field and typing username\n//cy.get('//*[@id=\"UserName\"]').type(\"admin\");\ncy.get(\"#UserName\").type(\"admin\"); // Clearing password field and typing password\ncy.get(\"#Password\").clear();\ncy.get(\"#Password\").type(\"password\"); // Clicking on login button\ncy.get(\".btn\").click();\ncy.contains(\"Employee List\").click();\ncy.get(\".table\").find(\"tr\").contains(\"Ramesh\").parent().contains(\"Benefits\").click();\ncy.url().should(\"include\", \"Benefit/Details/4\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'http://eaapp.somee.com/Benefit/Details/3' to include 'Benefit/Details/4'",
+                "estack": "AssertionError: Timed out retrying: expected 'http://eaapp.somee.com/Benefit/Details/3' to include 'Benefit/Details/4'\n    at Context.eval (http://eaapp.somee.com/__cypress/tests?p=cypress\\integration\\examples\\Tests\\ea.automation.spec.js:37:14)",
+                "diff": null
+              },
+              "uuid": "2324e372-6941-4ca4-9559-6c75331df571",
+              "parentUUID": "a5fd3cdc-e830-4ee0-b429-6d249a6f7dde",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2324e372-6941-4ca4-9559-6c75331df571"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 30780,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

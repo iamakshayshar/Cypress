@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-30T07:44:36.038Z",
+    "end": "2020-07-30T07:44:44.486Z",
+    "duration": 8448,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d527073e-6348-4569-9b6c-2cb0c54f7696",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Tests\\APITest.spec.js",
+      "file": "cypress\\integration\\examples\\Tests\\APITest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "769b3fa3-52ff-4cd9-933d-951474fd2e11",
+          "title": "TestAPI from ReqRes.in",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Get Request",
+              "fullTitle": "TestAPI from ReqRes.in Test Get Request",
+              "timedOut": null,
+              "duration": 3075,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(\"https://reqres.in/api/users/2\").its('body').should('have.property', 'data');",
+              "err": {},
+              "uuid": "5053d16b-b008-4b36-9a62-0ec3fea532c6",
+              "parentUUID": "769b3fa3-52ff-4cd9-933d-951474fd2e11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TestPOST from ReqRes.in",
+              "fullTitle": "TestAPI from ReqRes.in TestPOST from ReqRes.in",
+              "timedOut": null,
+              "duration": 1586,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/users',\n  body: {\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n  }\n}).then(function (res) {\n  expect(res.body).has.property(\"name\", \"morpheus\");\n});",
+              "err": {},
+              "uuid": "8207b614-244d-461b-b010-5a5bf520e069",
+              "parentUUID": "769b3fa3-52ff-4cd9-933d-951474fd2e11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "API testing",
+              "fullTitle": "TestAPI from ReqRes.in API testing",
+              "timedOut": null,
+              "duration": 3281,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'http://eaapp.somee.com/Account/Login',\n  body: {\n    \"__RequestVerificationToken\": \"jJ27CGSB6SHC24F0oV5nGIcKmDPqG2WfwOCDZxTUIhJ8Tk9TiSYlzhrzuhP5Ct2rHTiOY46WawRVGy6qanY18HsdbKEeK0TqWjgOY9b6RZE1\",\n    \"UserName\": \"admin\",\n    \"Password\": \"password\",\n    \"RememberMe\": \"false\"\n  },\n  failOnStatusCode: false\n}).then(function ($res) {\n  expect($res.status).to.eql(500);\n  expect($res.body).to.contain('<i>The required anti-forgery cookie &quot;__RequestVerificationToken&quot; is not present.</i>');\n});",
+              "err": {},
+              "uuid": "a5873119-f831-48d7-bfed-20de23e80dde",
+              "parentUUID": "769b3fa3-52ff-4cd9-933d-951474fd2e11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5053d16b-b008-4b36-9a62-0ec3fea532c6",
+            "8207b614-244d-461b-b010-5a5bf520e069",
+            "a5873119-f831-48d7-bfed-20de23e80dde"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7942,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}
