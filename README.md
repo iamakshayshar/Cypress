@@ -1,2 +1,16 @@
 # Cypress
 This is the repository for Cypress Framework with Mocha Awesome Report
+
+Steps to Run this project:
+
+1. Navigate to the directory where this project is saved.
+2. Open command prompt
+3. Run command:
+    npm run test
+4. Once the execution is completed run below command:
+    npm run combine-reports
+5. Once the reports are combined, run below command to generate HTML report:
+    npm run generate-report
+6. Once the HTML report is generated after running about command, 
+    Navigate to project folder and check 
+    <User.Dir>/mochareports/report.html
