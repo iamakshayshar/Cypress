@@ -22,10 +22,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 
 Cypress.on("test:after:run", (test, runnable) => {
-    let videoName = Cypress.spec.name
-    videoName = videoName.replace('/.js.*', '.js')
-    const videoUrl = '..\\..\\videos\\' + videoName + '.mp4'
-    addContext({ test }, videoUrl)
+    if (test.state === 'failed') {
+        const screenshotFileName = `${runnable.parent.title} -- ${test.title} (failed).png`
+        addContext({ test }, `assets/${Cypress.spec.name}/${screenshotFileName}`)
+        
+        const videoFileName = `${runnable.parent.title} -- ${test.title} (failed).mp4`
+        addContext({ test }, `assets/${Cypress.spec.name}/${videoFileName}`)
+    }
 });
 
 // Alternatively you can use CommonJS syntax:

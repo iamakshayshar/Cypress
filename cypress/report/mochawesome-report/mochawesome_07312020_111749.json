@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-31T05:47:18.960Z",
+    "end": "2020-07-31T05:47:49.173Z",
+    "duration": 30213,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7f336993-3d29-48cb-89f8-43fd4c26d503",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Tests\\ea.automation.spec.js",
+      "file": "cypress\\integration\\examples\\Tests\\ea.automation.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "76b67600-c201-427f-a3c0-fda2707f2e69",
+          "title": "Testing of EA App",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Application Test End to End",
+              "fullTitle": "Testing of EA App Application Test End to End",
+              "timedOut": null,
+              "duration": 29310,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"assets/examples\\\\Tests\\\\ea.automation.spec.js/Testing of EA App -- Application Test End to End (failed).png\",\n  \"assets/examples\\\\Tests\\\\ea.automation.spec.js/Testing of EA App -- Application Test End to End (failed).mp4\"\n]",
+              "code": "// This is the long way of using alias\n// cy.get(\"#loginLink\").then(($link) => {\n//     return $link.text();\n// }).as(\"linkText\");\n// This is the short way of using alias\ncy.get(\"#loginLink\").invoke('text').as(\"linkText\");\ncy.get(\"@linkText\").then(function ($x) {\n  expect($x).is.eql(\"Login\");\n});\ncy.contains(\"Login\").click(); // Verifying URL \ncy.url().should(\"include\", \"/Account/Login\"); // Clearing Username field and typing username\n//cy.get('//*[@id=\"UserName\"]').type(\"admin\");\ncy.get(\"#UserName\").type(\"admin\"); // Clearing password field and typing password\ncy.get(\"#Password\").clear();\ncy.get(\"#Password\").type(\"password\"); // Clicking on login button\ncy.get(\".btn\").click();\ncy.contains(\"Employee List\").click();\ncy.get(\".table\").find(\"tr\").contains(\"Ramesh\").parent().contains(\"Benefits\").click();\ncy.url().should(\"include\", \"Benefit/Details/4\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'http://eaapp.somee.com/Benefit/Details/3' to include 'Benefit/Details/4'",
+                "estack": "AssertionError: Timed out retrying: expected 'http://eaapp.somee.com/Benefit/Details/3' to include 'Benefit/Details/4'\n    at Context.eval (http://eaapp.somee.com/__cypress/tests?p=cypress\\integration\\examples\\Tests\\ea.automation.spec.js:37:14)",
+                "diff": null
+              },
+              "uuid": "08da56f3-7af8-4158-ace5-bcda30d05972",
+              "parentUUID": "76b67600-c201-427f-a3c0-fda2707f2e69",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "08da56f3-7af8-4158-ace5-bcda30d05972"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29310,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -25,3 +25,7 @@ Follow below steps to run your tests:
     -   "npm run generate-report"
 4. Once the HTML report is generated after running about command, Navigate to project folder and check 
     -   "<Cypress-InstallationDirectory>/mochareports/report.html"
+
+# Bug
+Following functionality is still not working an can be considered as bug
+1. Screenshots are gettinga attached in report for failure tests, but vidoes of the execution is not getting attached. 

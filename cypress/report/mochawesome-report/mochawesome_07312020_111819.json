@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-31T05:48:05.120Z",
+    "end": "2020-07-31T05:48:19.784Z",
+    "duration": 14664,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "23cc467b-4709-43da-8ab7-7bf30fef874f",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Tests\\EALoginPageTest.js",
+      "file": "cypress\\integration\\examples\\Tests\\EALoginPageTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6ce09b14-02a8-4eab-a0c7-317119d0c910",
+          "title": "Testing of EA App",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visit Login Page with Data Driven Testing and Page Object Model",
+              "fullTitle": "Testing of EA App Visit Login Page with Data Driven Testing and Page Object Model",
+              "timedOut": null,
+              "duration": 12094,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#loginLink\").invoke('text').as(\"linkText\");\ncy.get(\"@linkText\").then(function ($x) {\n  expect($x).is.eql(\"Login\");\n});\ncy.contains(\"Login\").click();\ncy.url().should(\"include\", \"/Account/Login\");\ncy.get(\"@userdetails\").then(function (userDetails) {\n  _EALoginPage.loginpage.performLogin(userDetails.UserName, userDetails.Password);\n});\n_EALoginPage.loginpage.clickLoginButton();",
+              "err": {},
+              "uuid": "a22ee547-3b49-4fa6-8fa7-806a2bb1402f",
+              "parentUUID": "6ce09b14-02a8-4eab-a0c7-317119d0c910",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a22ee547-3b49-4fa6-8fa7-806a2bb1402f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12094,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

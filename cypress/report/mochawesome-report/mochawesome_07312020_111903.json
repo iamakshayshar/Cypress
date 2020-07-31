@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-31T05:48:32.379Z",
+    "end": "2020-07-31T05:49:03.833Z",
+    "duration": 31454,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "028f27db-d673-4e26-90cd-2c9456168aec",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Tests\\EventHandling.spec.js",
+      "file": "cypress\\integration\\examples\\Tests\\EventHandling.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3339644f-7b68-4d03-867e-5983c8d3ef76",
+          "title": "Testing of EA App",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perfom Login",
+              "fullTitle": "Testing of EA App Perfom Login",
+              "timedOut": null,
+              "duration": 12016,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"admin\");\ncy.get(':nth-child(3) > input').click();\ncy.get(\"[name='generate']\").click();",
+              "err": {},
+              "uuid": "8a986bdf-aa04-442c-a36f-b90d27fd90b9",
+              "parentUUID": "3339644f-7b68-4d03-867e-5983c8d3ef76",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Perfom Login",
+              "fullTitle": "Testing of EA App Perfom Login",
+              "timedOut": null,
+              "duration": 10328,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"admin\");\ncy.get(':nth-child(3) > input').click();\ncy.get(\"[name='generate']\").click();\ncy.on(\"window:confirm\", function (str) {\n  expect(str).to.eq('You generated a Javascript alert'); // if we return false, it will click cancel button in alert\n  return true;\n});",
+              "err": {},
+              "uuid": "7356946a-7cb0-4ccc-a3e0-6b17d139e9c5",
+              "parentUUID": "3339644f-7b68-4d03-867e-5983c8d3ef76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8a986bdf-aa04-442c-a36f-b90d27fd90b9",
+            "7356946a-7cb0-4ccc-a3e0-6b17d139e9c5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22344,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

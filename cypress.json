@@ -1,6 +1,5 @@
 {
     "video": true,
-    "screenshotsfolder": "cypress/videos",
     "baseUrl": "http://eaapp.somee.com/",
     "env": {
         "username": "admin"
@@ -12,5 +11,7 @@
         "html": false,
         "json": true,
         "timestamp": "mmddyyyy_HHMMss"
-    }
+    },
+    "screenshotsFolder": "mochareports/assets",
+    "videosFolder": "mochareports/assets"
 }
