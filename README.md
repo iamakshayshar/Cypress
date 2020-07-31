@@ -1,7 +1,7 @@
-#Introduction 
+# Introduction 
 This is the repository for Cypress Framework with Mocha Awesome Report 
 
-#Getting Started
+# Getting Started
 Follow below process for getting started with Cypress Code and run it on your own system:
 1.	Installation process
     -   Clone this repository on your machine.
@@ -15,7 +15,7 @@ Follow below process for getting started with Cypress Code and run it on your ow
 4.	API references
     -   NA
 
-#Build and Test
+# Build and Test
 Follow below steps to run your tests:
     -   Once all the dependecies are installed, run below command to run the tests
         "npm run test"
