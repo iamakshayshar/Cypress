@@ -24,7 +24,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 Cypress.on("test:after:run", (test, runnable) => {
     let videoName = Cypress.spec.name
     videoName = videoName.replace('/.js.*', '.js')
-    const videoUrl = 'videos/examples/' + videoName + '.mp4'
+    const videoUrl = '..\\..\\videos\\' + videoName + '.mp4'
     addContext({ test }, videoUrl)
 });
 

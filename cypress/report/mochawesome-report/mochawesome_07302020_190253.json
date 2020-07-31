@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2020-07-30T07:44:20.285Z",
-    "end": "2020-07-30T07:44:20.287Z",
-    "duration": 2,
+    "start": "2020-07-30T13:32:53.405Z",
+    "end": "2020-07-30T13:32:53.409Z",
+    "duration": 4,
     "testsRegistered": 0,
     "passPercent": null,
     "pendingPercent": null,
@@ -37,7 +37,7 @@
     "marge": {
       "options": {
         "reportDir": "cypress/report/mochawesome-report",
-        "overwrite": false,
+        "overwrite": true,
         "html": false,
         "json": true,
         "timestamp": "mmddyyyy_HHMMss"
