@@ -17,15 +17,17 @@ Follow below process for getting started with Cypress Code and run it on your ow
 
 # Build and Test
 Follow below steps to run your tests:
-1. Once all the dependecies are installed, run below command to run the tests
-    -    "npm run test"
-2. Once the execution is completed run below command:
-    -   "npm run combine-reports"
-3. Once the reports are combined, run below command to generate HTML report:
-    -   "npm run generate-report"
-4. Once the HTML report is generated after running about command, Navigate to project folder and check 
-    -   "<Cypress-InstallationDirectory>/mochareports/report.html"
+    -   Once all the dependecies are installed, run below command to clear all the existing reports
+        "npm run clean-reports"
+    -   Above command will clean the existing reports. Now run below command to start test execution
+        "npm run test"
+    -   Once the execution is completed run below command:
+        "npm run combine-reports"
+    -   Once the reports are combined, run below command to generate HTML report:
+        "npm run generate-report"
+    -   Once the HTML report is generated after running about command, Navigate to project folder and check 
+        "<Cypress-InstallationDirectory>/mochareports/report.html"
 
 # Bug
 Following functionality is still not working an can be considered as bug
-1. Screenshots are gettinga attached in report for failure tests, but vidoes of the execution is not getting attached. 
+    -   Screenshots are gettinga attached in report for failure tests, but vidoes of the execution is not getting attached. 

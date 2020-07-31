@@ -1,8 +1,9 @@
 {
     "scripts": {
+        "clean-reports": "del cypress\\reports\\mochawesome-report\\*.json",
         "test": "cypress run --headless",
-        "test:chrome": "cypress run --browser chrome",
-        "combine-reports": "mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json>mochareports/report.json",
+        "test:chrome": "cypress run --headless --browser chrome",
+        "combine-reports": "mochawesome-merge cypress/reports/mochawesome-report/mochawesome*.json>mochareports/report.json",
         "generate-report": "marge mochareports/report.json -f report -o mochareports"
     },
     "devDependencies": {
