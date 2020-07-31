@@ -18,10 +18,10 @@ Follow below process for getting started with Cypress Code and run it on your ow
 # Build and Test
 Follow below steps to run your tests:
 1. Once all the dependecies are installed, run below command to run the tests
-    "npm run test"
+    -    "npm run test"
 2. Once the execution is completed run below command:
-    "npm run combine-reports"
+    -   "npm run combine-reports"
 3. Once the reports are combined, run below command to generate HTML report:
-    "npm run generate-report"
+    -   "npm run generate-report"
 4. Once the HTML report is generated after running about command, Navigate to project folder and check 
-    "<Cypress-InstallationDirectory>/mochareports/report.html"
+    -   "<Cypress-InstallationDirectory>/mochareports/report.html"
