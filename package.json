@@ -1,21 +1,21 @@
 {
     "scripts": {
-        "clean-reports": "del cypress\\reports\\mochawesome-report\\*.json",
-        "test": "cypress run --headless",
-        "test:chrome": "cypress run --headless --browser chrome",
-        "combine-reports": "mochawesome-merge cypress/reports/mochawesome-report/mochawesome*.json>mochareports/report.json",
+        "clean-reports": "del cypress\\report\\mochawesome-report\\*.json",
+        "test": "cypress run",
+        "test:chrome": "cypress run --browser chrome",
+        "combine-reports": "mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json>mochareports/report.json",
         "generate-report": "marge mochareports/report.json -f report -o mochareports"
     },
     "devDependencies": {
         "@percy/cypress": "^2.3.1",
-        "cypress": "^4.11.0",
+        "cypress": "^4.12.1",
         "cypress-dark": "^1.7.14",
         "cypress-file-upload": "^4.0.7",
+        "cypress-multi-reporters": "1.4.0",
         "mocha": "5.2.0",
         "mochawesome": "4.1.0",
-        "mochawesome-merge": "4.0.3",
-        "cypress-multi-reporters": "1.4.0",
-        "mochawesome-report-generator": "5.1.0"
+        "mochawesome-merge": "^4.0.3",
+        "mochawesome-report-generator": "^5.1.0"
     },
     "dependencies": {
         "@reportportal/agent-js-cypress": "^5.0.1",

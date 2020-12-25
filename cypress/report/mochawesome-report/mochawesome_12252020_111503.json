@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2020-07-31T05:47:01.590Z",
-    "end": "2020-07-31T05:47:07.897Z",
-    "duration": 6307,
+    "start": "2020-12-25T05:44:56.608Z",
+    "end": "2020-12-25T05:45:03.585Z",
+    "duration": 6977,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d309d3df-f3f9-47d8-8ff5-6d55f8e4d151",
+      "uuid": "3c05b459-7ee6-4545-b5f6-d8055d26e3fc",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Tests\\APITest.spec.js",
       "file": "cypress\\integration\\examples\\Tests\\APITest.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4de6c0f9-ba68-4d87-9ce6-0d96ab05d6d9",
+          "uuid": "39158f9d-7c72-43f4-b7f2-e85a77ffef90",
           "title": "TestAPI from ReqRes.in",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Test Get Request",
               "fullTitle": "TestAPI from ReqRes.in Test Get Request",
               "timedOut": null,
-              "duration": 2193,
+              "duration": 2366,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.request(\"https://reqres.in/api/users/2\").its('body').should('have.property', 'data');",
               "err": {},
-              "uuid": "96151a2a-06f1-426a-97e5-d25a0c424669",
-              "parentUUID": "4de6c0f9-ba68-4d87-9ce6-0d96ab05d6d9",
+              "uuid": "fa63119d-51be-45fa-944e-ca348ad0e1c2",
+              "parentUUID": "39158f9d-7c72-43f4-b7f2-e85a77ffef90",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "TestPOST from ReqRes.in",
               "fullTitle": "TestAPI from ReqRes.in TestPOST from ReqRes.in",
               "timedOut": null,
-              "duration": 1336,
+              "duration": 1506,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/users',\n  body: {\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n  }\n}).then(function (res) {\n  expect(res.body).has.property(\"name\", \"morpheus\");\n});",
               "err": {},
-              "uuid": "51759a9b-190d-4787-8c51-f4336940b489",
-              "parentUUID": "4de6c0f9-ba68-4d87-9ce6-0d96ab05d6d9",
+              "uuid": "2fe05ef0-c5af-4c33-b93e-af25103b9ece",
+              "parentUUID": "39158f9d-7c72-43f4-b7f2-e85a77ffef90",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "API testing",
               "fullTitle": "TestAPI from ReqRes.in API testing",
               "timedOut": null,
-              "duration": 2284,
+              "duration": 2539,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.request({\n  method: 'POST',\n  url: 'http://eaapp.somee.com/Account/Login',\n  body: {\n    \"__RequestVerificationToken\": \"jJ27CGSB6SHC24F0oV5nGIcKmDPqG2WfwOCDZxTUIhJ8Tk9TiSYlzhrzuhP5Ct2rHTiOY46WawRVGy6qanY18HsdbKEeK0TqWjgOY9b6RZE1\",\n    \"UserName\": \"admin\",\n    \"Password\": \"password\",\n    \"RememberMe\": \"false\"\n  },\n  failOnStatusCode: false\n}).then(function ($res) {\n  expect($res.status).to.eql(500);\n  expect($res.body).to.contain('<i>The required anti-forgery cookie &quot;__RequestVerificationToken&quot; is not present.</i>');\n});",
               "err": {},
-              "uuid": "b7b0c2a0-bb60-4540-b764-06b109811409",
-              "parentUUID": "4de6c0f9-ba68-4d87-9ce6-0d96ab05d6d9",
+              "uuid": "2b7de615-2932-4baa-bfb1-9068d6c8e22a",
+              "parentUUID": "39158f9d-7c72-43f4-b7f2-e85a77ffef90",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "96151a2a-06f1-426a-97e5-d25a0c424669",
-            "51759a9b-190d-4787-8c51-f4336940b489",
-            "b7b0c2a0-bb60-4540-b764-06b109811409"
+            "fa63119d-51be-45fa-944e-ca348ad0e1c2",
+            "2fe05ef0-c5af-4c33-b93e-af25103b9ece",
+            "2b7de615-2932-4baa-bfb1-9068d6c8e22a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5813,
+          "duration": 6411,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

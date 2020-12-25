@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2020-07-31T05:47:18.960Z",
-    "end": "2020-07-31T05:47:49.173Z",
-    "duration": 30213,
+    "start": "2020-12-25T05:45:11.095Z",
+    "end": "2020-12-25T05:45:36.627Z",
+    "duration": 25532,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7f336993-3d29-48cb-89f8-43fd4c26d503",
+      "uuid": "b7a33dd0-bd7e-4937-b014-d8935f333f1e",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Tests\\ea.automation.spec.js",
       "file": "cypress\\integration\\examples\\Tests\\ea.automation.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "76b67600-c201-427f-a3c0-fda2707f2e69",
+          "uuid": "2a2ab6ee-4435-46bc-9351-6ef51dbe3ced",
           "title": "Testing of EA App",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Application Test End to End",
               "fullTitle": "Testing of EA App Application Test End to End",
               "timedOut": null,
-              "duration": 29310,
+              "duration": 24518,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying: expected 'http://eaapp.somee.com/Benefit/Details/3' to include 'Benefit/Details/4'\n    at Context.eval (http://eaapp.somee.com/__cypress/tests?p=cypress\\integration\\examples\\Tests\\ea.automation.spec.js:37:14)",
                 "diff": null
               },
-              "uuid": "08da56f3-7af8-4158-ace5-bcda30d05972",
-              "parentUUID": "76b67600-c201-427f-a3c0-fda2707f2e69",
+              "uuid": "06f26cf8-2c23-4926-b8ac-bc4ce57204a0",
+              "parentUUID": "2a2ab6ee-4435-46bc-9351-6ef51dbe3ced",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "08da56f3-7af8-4158-ace5-bcda30d05972"
+            "06f26cf8-2c23-4926-b8ac-bc4ce57204a0"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 29310,
+          "duration": 24518,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

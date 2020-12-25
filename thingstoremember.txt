@@ -3,6 +3,7 @@ Steps to Run this project:
 1. Navigate to the directory where this project is saved.
 2. Open command prompt
 3. Run command:
+    npm run clean-reports
     npm run test
 4. Once the execution is completed run below command:
     npm run combine-reports

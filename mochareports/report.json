@@ -5,9 +5,9 @@
     "passes": 7,
     "pending": 0,
     "failures": 1,
-    "start": "2020-07-31T05:50:30.794Z",
-    "end": "2020-07-31T05:50:30.794Z",
-    "duration": 80790,
+    "start": "2020-12-25T05:47:15.018Z",
+    "end": "2020-12-25T05:47:15.018Z",
+    "duration": 67184,
     "testsRegistered": 8,
     "passPercent": 87.5,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d309d3df-f3f9-47d8-8ff5-6d55f8e4d151",
+      "uuid": "3c05b459-7ee6-4545-b5f6-d8055d26e3fc",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Tests\\APITest.spec.js",
       "file": "cypress\\integration\\examples\\Tests\\APITest.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4de6c0f9-ba68-4d87-9ce6-0d96ab05d6d9",
+          "uuid": "39158f9d-7c72-43f4-b7f2-e85a77ffef90",
           "title": "TestAPI from ReqRes.in",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Test Get Request",
               "fullTitle": "TestAPI from ReqRes.in Test Get Request",
               "timedOut": null,
-              "duration": 2193,
+              "duration": 2366,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.request(\"https://reqres.in/api/users/2\").its('body').should('have.property', 'data');",
               "err": {},
-              "uuid": "96151a2a-06f1-426a-97e5-d25a0c424669",
-              "parentUUID": "4de6c0f9-ba68-4d87-9ce6-0d96ab05d6d9",
+              "uuid": "fa63119d-51be-45fa-944e-ca348ad0e1c2",
+              "parentUUID": "39158f9d-7c72-43f4-b7f2-e85a77ffef90",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "TestPOST from ReqRes.in",
               "fullTitle": "TestAPI from ReqRes.in TestPOST from ReqRes.in",
               "timedOut": null,
-              "duration": 1336,
+              "duration": 1506,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/users',\n  body: {\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n  }\n}).then(function (res) {\n  expect(res.body).has.property(\"name\", \"morpheus\");\n});",
               "err": {},
-              "uuid": "51759a9b-190d-4787-8c51-f4336940b489",
-              "parentUUID": "4de6c0f9-ba68-4d87-9ce6-0d96ab05d6d9",
+              "uuid": "2fe05ef0-c5af-4c33-b93e-af25103b9ece",
+              "parentUUID": "39158f9d-7c72-43f4-b7f2-e85a77ffef90",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "API testing",
               "fullTitle": "TestAPI from ReqRes.in API testing",
               "timedOut": null,
-              "duration": 2284,
+              "duration": 2539,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.request({\n  method: 'POST',\n  url: 'http://eaapp.somee.com/Account/Login',\n  body: {\n    \"__RequestVerificationToken\": \"jJ27CGSB6SHC24F0oV5nGIcKmDPqG2WfwOCDZxTUIhJ8Tk9TiSYlzhrzuhP5Ct2rHTiOY46WawRVGy6qanY18HsdbKEeK0TqWjgOY9b6RZE1\",\n    \"UserName\": \"admin\",\n    \"Password\": \"password\",\n    \"RememberMe\": \"false\"\n  },\n  failOnStatusCode: false\n}).then(function ($res) {\n  expect($res.status).to.eql(500);\n  expect($res.body).to.contain('<i>The required anti-forgery cookie &quot;__RequestVerificationToken&quot; is not present.</i>');\n});",
               "err": {},
-              "uuid": "b7b0c2a0-bb60-4540-b764-06b109811409",
-              "parentUUID": "4de6c0f9-ba68-4d87-9ce6-0d96ab05d6d9",
+              "uuid": "2b7de615-2932-4baa-bfb1-9068d6c8e22a",
+              "parentUUID": "39158f9d-7c72-43f4-b7f2-e85a77ffef90",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "96151a2a-06f1-426a-97e5-d25a0c424669",
-            "51759a9b-190d-4787-8c51-f4336940b489",
-            "b7b0c2a0-bb60-4540-b764-06b109811409"
+            "fa63119d-51be-45fa-944e-ca348ad0e1c2",
+            "2fe05ef0-c5af-4c33-b93e-af25103b9ece",
+            "2b7de615-2932-4baa-bfb1-9068d6c8e22a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5813,
+          "duration": 6411,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -114,7 +114,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "7f336993-3d29-48cb-89f8-43fd4c26d503",
+      "uuid": "b7a33dd0-bd7e-4937-b014-d8935f333f1e",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Tests\\ea.automation.spec.js",
       "file": "cypress\\integration\\examples\\Tests\\ea.automation.spec.js",
@@ -123,7 +123,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "76b67600-c201-427f-a3c0-fda2707f2e69",
+          "uuid": "2a2ab6ee-4435-46bc-9351-6ef51dbe3ced",
           "title": "Testing of EA App",
           "fullFile": "",
           "file": "",
@@ -134,7 +134,7 @@
               "title": "Application Test End to End",
               "fullTitle": "Testing of EA App Application Test End to End",
               "timedOut": null,
-              "duration": 29310,
+              "duration": 24518,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -147,8 +147,8 @@
                 "estack": "AssertionError: Timed out retrying: expected 'http://eaapp.somee.com/Benefit/Details/3' to include 'Benefit/Details/4'\n    at Context.eval (http://eaapp.somee.com/__cypress/tests?p=cypress\\integration\\examples\\Tests\\ea.automation.spec.js:37:14)",
                 "diff": null
               },
-              "uuid": "08da56f3-7af8-4158-ace5-bcda30d05972",
-              "parentUUID": "76b67600-c201-427f-a3c0-fda2707f2e69",
+              "uuid": "06f26cf8-2c23-4926-b8ac-bc4ce57204a0",
+              "parentUUID": "2a2ab6ee-4435-46bc-9351-6ef51dbe3ced",
               "isHook": false,
               "skipped": false
             }
@@ -156,11 +156,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "08da56f3-7af8-4158-ace5-bcda30d05972"
+            "06f26cf8-2c23-4926-b8ac-bc4ce57204a0"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 29310,
+          "duration": 24518,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -176,7 +176,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "23cc467b-4709-43da-8ab7-7bf30fef874f",
+      "uuid": "7bb95ee7-4898-4b3a-9056-f662253337c7",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Tests\\EALoginPageTest.js",
       "file": "cypress\\integration\\examples\\Tests\\EALoginPageTest.js",
@@ -185,7 +185,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6ce09b14-02a8-4eab-a0c7-317119d0c910",
+          "uuid": "e54f992c-b486-436e-b453-659331f2e6aa",
           "title": "Testing of EA App",
           "fullFile": "",
           "file": "",
@@ -196,7 +196,7 @@
               "title": "Visit Login Page with Data Driven Testing and Page Object Model",
               "fullTitle": "Testing of EA App Visit Login Page with Data Driven Testing and Page Object Model",
               "timedOut": null,
-              "duration": 12094,
+              "duration": 12848,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -205,20 +205,20 @@
               "context": null,
               "code": "cy.get(\"#loginLink\").invoke('text').as(\"linkText\");\ncy.get(\"@linkText\").then(function ($x) {\n  expect($x).is.eql(\"Login\");\n});\ncy.contains(\"Login\").click();\ncy.url().should(\"include\", \"/Account/Login\");\ncy.get(\"@userdetails\").then(function (userDetails) {\n  _EALoginPage.loginpage.performLogin(userDetails.UserName, userDetails.Password);\n});\n_EALoginPage.loginpage.clickLoginButton();",
               "err": {},
-              "uuid": "a22ee547-3b49-4fa6-8fa7-806a2bb1402f",
-              "parentUUID": "6ce09b14-02a8-4eab-a0c7-317119d0c910",
+              "uuid": "a31643c6-0cd0-47d9-83df-d1e78f5117d6",
+              "parentUUID": "e54f992c-b486-436e-b453-659331f2e6aa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a22ee547-3b49-4fa6-8fa7-806a2bb1402f"
+            "a31643c6-0cd0-47d9-83df-d1e78f5117d6"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12094,
+          "duration": 12848,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -234,7 +234,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "028f27db-d673-4e26-90cd-2c9456168aec",
+      "uuid": "9ec78f2d-7cda-4243-aa8c-c9ca2d9b9314",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Tests\\EventHandling.spec.js",
       "file": "cypress\\integration\\examples\\Tests\\EventHandling.spec.js",
@@ -243,7 +243,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3339644f-7b68-4d03-867e-5983c8d3ef76",
+          "uuid": "c0a9c0a8-ff43-4821-942c-0c5375877693",
           "title": "Testing of EA App",
           "fullFile": "",
           "file": "",
@@ -254,7 +254,7 @@
               "title": "Perfom Login",
               "fullTitle": "Testing of EA App Perfom Login",
               "timedOut": null,
-              "duration": 12016,
+              "duration": 8023,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -263,8 +263,8 @@
               "context": null,
               "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"admin\");\ncy.get(':nth-child(3) > input').click();\ncy.get(\"[name='generate']\").click();",
               "err": {},
-              "uuid": "8a986bdf-aa04-442c-a36f-b90d27fd90b9",
-              "parentUUID": "3339644f-7b68-4d03-867e-5983c8d3ef76",
+              "uuid": "bd21a8b3-b3ec-4d12-b98c-0779865aa754",
+              "parentUUID": "c0a9c0a8-ff43-4821-942c-0c5375877693",
               "isHook": false,
               "skipped": false
             },
@@ -272,7 +272,7 @@
               "title": "Perfom Login",
               "fullTitle": "Testing of EA App Perfom Login",
               "timedOut": null,
-              "duration": 10328,
+              "duration": 6336,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -281,21 +281,21 @@
               "context": null,
               "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"admin\");\ncy.get(':nth-child(3) > input').click();\ncy.get(\"[name='generate']\").click();\ncy.on(\"window:confirm\", function (str) {\n  expect(str).to.eq('You generated a Javascript alert'); // if we return false, it will click cancel button in alert\n  return true;\n});",
               "err": {},
-              "uuid": "7356946a-7cb0-4ccc-a3e0-6b17d139e9c5",
-              "parentUUID": "3339644f-7b68-4d03-867e-5983c8d3ef76",
+              "uuid": "01b3bf5a-82a0-4ede-8cd7-c9dc7235e2ac",
+              "parentUUID": "c0a9c0a8-ff43-4821-942c-0c5375877693",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8a986bdf-aa04-442c-a36f-b90d27fd90b9",
-            "7356946a-7cb0-4ccc-a3e0-6b17d139e9c5"
+            "bd21a8b3-b3ec-4d12-b98c-0779865aa754",
+            "01b3bf5a-82a0-4ede-8cd7-c9dc7235e2ac"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 22344,
+          "duration": 14359,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -311,7 +311,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "27ba629b-87e5-4c42-96bf-ae6c095b7c77",
+      "uuid": "6582412c-8cf0-447b-b1fe-e9e250cd72e7",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Tests\\FileUploadExample.js",
       "file": "cypress\\integration\\examples\\Tests\\FileUploadExample.js",
@@ -320,7 +320,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "56b2fc38-76e3-4643-8295-fe4d8c0d6237",
+          "uuid": "c8e79631-f0e3-4637-8514-aa83e0f6ddbb",
           "title": "Testing fileupload via fineuploader.com",
           "fullFile": "",
           "file": "",
@@ -331,7 +331,7 @@
               "title": "Uploading file and validating",
               "fullTitle": "Testing fileupload via fineuploader.com Uploading file and validating",
               "timedOut": null,
-              "duration": 11229,
+              "duration": 9048,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -340,20 +340,20 @@
               "context": null,
               "code": "var yourFixturePath = 'eauser.json';\ncy.get('.buttons > .qq-upload-button-selector > input').attachFile(yourFixturePath);",
               "err": {},
-              "uuid": "67454564-486d-4b0a-8123-72ad79deaa20",
-              "parentUUID": "56b2fc38-76e3-4643-8295-fe4d8c0d6237",
+              "uuid": "7d0b0252-4b83-4639-9d9e-c31a41cf7226",
+              "parentUUID": "c8e79631-f0e3-4637-8514-aa83e0f6ddbb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "67454564-486d-4b0a-8123-72ad79deaa20"
+            "7d0b0252-4b83-4639-9d9e-c31a41cf7226"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11229,
+          "duration": 9048,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
