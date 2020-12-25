@@ -28,6 +28,20 @@ Follow below steps to run your tests:
     -   Once the HTML report is generated after running about command, Navigate to project folder and check 
         "<Cypress-InstallationDirectory>/mochareports/report.html"
 
+# Execution inside a Docker container
+Now that we have tried to execute the project locally and tested everything, we can further extend cypress tests to run inside a Docker Container. Follow the below steps:
+
+    -   Install Docker on windows/mac/linux
+    -   Execute the below command in the command prompt or terminal:
+        docker run -it -v $PWD:/e2e -w /e2e cypress/included:3.3.1
+
+    Explanation of docker run command:
+
+    -   -it = interactive terminal
+    -   -v $PWD:/e2e = volume mounting current folder to /e2e inside the container
+    -   -w /e2e = setting current working directory to /e2e
+    -   cypress/included:3.3.2 = is the name of docker image with tag
+
 # Bug
 Following functionality is still not working an can be considered as bug
     -   Screenshots are gettinga attached in report for failure tests, but vidoes of the execution is not getting attached. 
