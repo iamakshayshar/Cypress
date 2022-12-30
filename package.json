@@ -18,7 +18,7 @@
         "mochawesome-report-generator": "^5.1.0"
     },
     "dependencies": {
-        "@reportportal/agent-js-cypress": "^5.0.1",
+        "@reportportal/agent-js-cypress": "^5.1.0",
         "test": "^0.6.0"
     }
 }
